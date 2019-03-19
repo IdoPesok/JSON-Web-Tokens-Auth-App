@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>JWT AUTH APP</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="/">Home</a>
+            <% if (auth) { %>
+                <a href="/account">Account</a>
+                <a href="/logout">Logout</a>
+            <% } else { %>
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+            <% } %>
+        </div>
+        <% if (error != "") { %>
+            <div class="flash-message error-message">
+                <p><%= error %></p>
+            </div>
+        <% } %>
+        <% if (success != "") { %>
+            <div class="flash-message success-message">
+                <p><%= success %></p>
+            </div>
+        <% } %>

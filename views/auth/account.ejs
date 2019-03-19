@@ -1,0 +1,12 @@
+<% include ../partials/header %>
+
+<h1 class="text-center top-buffer">My Account</h1>
+<p class="text-center">Username: <%= currentUser.username %></p>
+<p class="text-center">Email: <%= currentUser.email %></p>
+<div class="top-buffer">
+    <a href="/update_username" class="account-btn">Change Username</a>
+    <a href="/update_email" class="account-btn">Change Email</a>
+    <a href="/update_password" class="account-btn">Change Password</a>
+</div>
+
+<% include ../partials/footer %>

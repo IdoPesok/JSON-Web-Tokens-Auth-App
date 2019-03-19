@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+<form action="/update_username" method="POST" class="form">
+    <h1 class="form-title">Update Username</h1>
+    <p class="text-center text-white">Current Username: <%= currentUser.username %></p>
+    <div class="form-group">
+        <p class="form-label">New Username</p>
+        <input type="text" class="form-input" name="username">
+    </div>
+    <div class="form-group">
+        <input class="form-submit" type="submit" value="submit">
+    </div>
+    <a href="/account" class="form-btn-sm">Back</a>
+</form>
+
+<% include ../partials/footer %>
